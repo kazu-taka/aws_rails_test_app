@@ -1,0 +1,10 @@
+ ja:
+   tests:
+     new:
+       title: テスト情報
+     show:
+       Title: タイトル 
+       Product: 処理物
+       Description: 詳細
+       Result: 結果
+       Name: 担当者

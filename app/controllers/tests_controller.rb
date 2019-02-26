@@ -6,11 +6,17 @@ class TestsController < ApplicationController
   def index
     @tests = Test.all
   end
-
+  
+  def card_index
+    @tests = Test.all
+  end
+  
   # GET /tests/1
   # GET /tests/1.json
   def show
   end
+  
+  
 
   # GET /tests/new
   def new
@@ -28,7 +34,7 @@ class TestsController < ApplicationController
 
     respond_to do |format|
       if @test.save
-        format.html { redirect_to @test, notice: 'テストデータを登録しました' }
+        format.html { redirect_to "tests", notice: 'テストデータを登録しました' }
         format.json { render :show, status: :created, location: @test }
       else
         format.html { render :new }
@@ -42,7 +48,7 @@ class TestsController < ApplicationController
   def update
     respond_to do |format|
       if @test.update(test_params)
-        format.html { redirect_to @test, notice: 'テストデータを更新しました' }
+        format.html { redirect_to "/tests", notice: 'テストデータを更新しました' }
         format.json { render :show, status: :ok, location: @test }
       else
         format.html { render :edit }

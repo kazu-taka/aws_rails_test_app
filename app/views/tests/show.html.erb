@@ -1,35 +1,35 @@
-<div class="container">
+<div class="mx-auto">
   <p>
     <strong>Test date:</strong>
     <%= @test.test_date %>
   </p>
   
   <p>
-    <strong>Title:</strong>
+    <strong><%= t ".title" %>:</strong>
     <%= @test.title %>
   </p>
   
   <p>
-    <strong>Product:</strong>
+    <strong><%= t ".description" %>: </strong>
     <%= @test.product %>
   </p>
   
   <p>
-    <strong>Description:</strong>
+    <strong><%= t ".description:" %>:</strong>
     <%= @test.description %>
   </p>
   
   <p>
-    <strong>Result:</strong>
+    <strong><%= t ".result" %>:</strong>
     <%= @test.result %>
   </p>
   
   <p>
-    <strong>Name:</strong>
+    <strong><%= t ".name:" %>:</strong>
     <%= @test.name %>
   </p>
   
-  <%= link_to 'Edit', edit_test_path(@test) %> |
-  <%= link_to 'Back', tests_path %>
+  <p  class="text-center  mt-5"><%= link_to 'Edit', edit_test_path(@test) %> |
+  <%= link_to 'Back', tests_path %></p>
   </div>
 </div>

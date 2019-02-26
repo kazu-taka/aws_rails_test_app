@@ -1,9 +1,13 @@
-<div class="container text-center">
+<div class="center-block　col-md-10 offset-md-1 mt-3">
   <div class="mb-5">
-    <h1>テスト一覧</h1>
+    <h1 class="text-center">テスト一覧</h1>
+  </div>
+    
+  <div>
+    <p  class="text-right"><%= link_to '新規作成', new_test_path %></p>
   </div>
   
-  <div class="m-3">
+  <div class="table table-striped table-hover table-responsive">
     <table>
       <thead>
         <tr>
@@ -21,9 +25,9 @@
         <% @tests.each do |test| %>
           <tr>
             <td><%= test.test_date %></td>
-            <td><%= test.title %></td>
-            <td><%= test.product %></td>
-            <td><%= test.description %></td>
+            <td><%= test.title .truncate(20) %></td>
+            <td><%= test.product .truncate(20)%></td>
+            <td><%= test.description .truncate(30) %></td>
             <td><%= test.result %></td>
             <td><%= test.name %></td>
             <td class="px-2"><%= link_to '詳細', test %></td>
@@ -34,9 +38,4 @@
       </tbody>
     </table>
   </div>  
-  
-  <div>
-    <%= link_to '新規作成', new_test_path %>
-  </div>
-  
 </div>
