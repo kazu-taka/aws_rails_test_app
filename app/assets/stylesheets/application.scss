@@ -12,4 +12,12 @@
  *
 
  */
+ 
+.cardbox{
+    border: 2px solid gray;
+    display: flex;
+}
+.myform{
+    width: 40%;
+}
 @import "bootstrap";

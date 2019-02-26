@@ -1,34 +1,36 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Test date:</strong>
-  <%= @test.test_date %>
-</p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @test.title %>
-</p>
-
-<p>
-  <strong>Product:</strong>
-  <%= @test.product %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @test.description %>
-</p>
-
-<p>
-  <strong>Result:</strong>
-  <%= @test.result %>
-</p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @test.name %>
-</p>
-
-<%= link_to 'Edit', edit_test_path(@test) %> |
-<%= link_to 'Back', tests_path %>
+<div class="mx-auto">
+  <p>
+    <%= t ".test_date" %>
+    <!--<strong>Test date:</strong>-->
+    <%= @test.test_date %>
+  </p>
+  
+  <p>
+    <strong><%= t ".title" %>:</strong>
+    <%= @test.title %>
+  </p>
+  
+  <p>
+    <strong><%= t ".description" %>: </strong>
+    <%= @test.product %>
+  </p>
+  
+  <p>
+    <strong><%= t ".description:" %>:</strong>
+    <%= @test.description %>
+  </p>
+  
+  <p>
+    <strong><%= t ".result" %>:</strong>
+    <%= @test.result %>
+  </p>
+  
+  <p>
+    <strong><%= t ".name:" %>:</strong>
+    <%= @test.name %>
+  </p>
+  
+  <p  class="text-center  mt-5"><%= link_to 'Edit', edit_test_path(@test) %> |
+  <%= link_to 'Back', tests_path %></p>
+  </div>
+</div>

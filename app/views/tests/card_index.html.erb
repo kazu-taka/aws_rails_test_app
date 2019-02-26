@@ -1,0 +1,48 @@
+<div class="mx-auto">
+  <div class="mb-5">
+    <h1 class="text-center">テスト一覧</h1>
+  </div>
+    
+  <div>
+    <p class = ""><%= link_to '新規作成', new_test_path %></p>
+  </div>
+  
+  <div class="d-flex flex-column">
+    <div>
+        <% @tests.each do |test| %>
+            <table class="cardbox m-2">
+              <tr>
+                <th>Test date</th>
+                <td><%= test.test_date %></td>
+              </tr>
+              <tr>
+                <th>Title</th>
+                <td><%= test.title%></td>
+              </tr> 
+              <tr>
+                <th>Product</th>
+                <td><%= test.product%></td>
+              </tr>
+              <tr>
+                <th>Description</th>
+                <td><%= test.description %></td>
+              </tr>
+              <tr>
+                <th>Result</th>
+                <td><%= test.result %></td>
+              </tr>
+              <tr>
+                <th>Name</th>
+                <td><%= test.name %></td>
+              </tr>
+              <tr>
+                <th></th>
+                <td><%= link_to '詳細', test %> | <%= link_to '編集', edit_test_path(test) %> | 
+                <%= link_to '削除', test, method: :delete, data: { confirm: '本当に削除しますか？' } %></td>
+              </tr>
+            </table>
+
+        <% end %>
+    </div>
+  </div>  
+</div>
