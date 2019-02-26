@@ -3,6 +3,7 @@
      new:
        title: テスト情報
      show:
+       test_date: テスト日
        Title: タイトル 
        Product: 処理物
        Description: 詳細
